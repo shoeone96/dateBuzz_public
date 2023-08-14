@@ -1,0 +1,75 @@
+
+spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/dateBuzz?allowPublicKeyRetrieval=true&useSSL=false
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+  sql:
+    init:
+      platform: mariaDB
+  mvc:
+    decodeCharset: UTF-8
+    urlEncoding:
+      charset: UTF-8
+  rabbitmq:
+    host: localhost
+    port: 5672 # default port
+    username: ${RABBIT_USERNAME}
+    password: ${RABBIT_PASSWORD}
+  config:
+    app:
+      duration: 10000
+jwt:
+  secret-key: ${TOKEN_SECRET_KEY}
+  token:
+    expired-time-ms: 1800000
+cloud:
+  aws:
+    credentials:
+      accessKey: ${CLOUD_ACCESS_KEY}
+      secretKey: ${CLOUD_SECRET_KEY}
+    region:
+      static: ap-northeast-2
+    s3:
+      bucket: datebuzz-bucket
+bot:
+  token: ${BOT_TOKEN}
+  username: ${BOT_USER_NAME}
+  chatId: ${BOT_CHAT_ID}
+# Logging
+logging:
+  level:
+    root: info
+  org:
+    hibernate:
+      SQL: debug
+      type:
+        descriptor:
+          sql: trace
+  pattern:
+    console: "%-5level %d{yy-MM-dd HH:mm:SSS}[%thread] %logger[%method:%line] - %msg%n"
+    file: "%-5level %d{yy-MM-dd HH:mm:SSS}[%thread] %logger[%method:%line] - %msg%n"
+  file:
+    name: /Users/ijung-won/IdeaProjects/serverProjects/datebuzz/Back-end/logs/error.log
+  logback:
+    rollingpolicy:
+      max-file-size: 1MB                #default 10M
+      max-history: 31                   #default 7
+      file-name-pattern: ${LOG_FILE}.%d{yyyy-MM-dd}.%i.log
+  server:
+    tomcat:
+      basedir: ${LOG_STORE}
+    accesslog:
+      enabled: true
+      pattern: "%{yyyy-MM-dd HH:mm:ss}t\\t%s\\t%r\\t%{User-Agent}i\\t%{Referer}i\\t%a\\t%b"
+springdoc:
+  swagger-ui:
+    path: "/swagger-ui.html"            # Swagger UI 경로 => localhost:8000/demo-ui.html

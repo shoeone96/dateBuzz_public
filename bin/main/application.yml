@@ -1,0 +1,28 @@
+
+spring:
+  datasource:
+    url: ${DATASOURCE_URL}
+    username: ${DATASOURCE_USERNAME}
+    password: ${DATASOURCE_PASSWORD}
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        #        show_sql: true
+        format_sql: true
+jwt:
+  secret-key: ${TOKEN_SECRET_KEY}
+  #    //30days
+  token:
+    expired-time-ms: ${TOKEN_EXPIRE_TIME}
+#  datasource:
+#    url: jdbc:h2:tcp://localhost/~/dateBuzz;AUTO_SERVER=TRUE
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#  h2:
+#    console:
+#      enabled: true  # H2 Console을 사용할지 여부 (H2 Console은 H2 Database를 UI로 제공해주는 기능)
+
