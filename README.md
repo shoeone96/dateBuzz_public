@@ -13,6 +13,12 @@
 * [ ] 쿼리 튜닝
 * [ ] BackLog
 
+--- 
+# DateBuzz
+<img src = "https://github.com/shoeone96/dateBuzz_public/assets/85065626/556224b7-b5f8-406d-979c-c083f63ef22d" width = "300px" />
+<img src = "https://github.com/shoeone96/dateBuzz_public/assets/85065626/9719ba78-4625-4dca-bb85-4697cc6def46" width = "300px" />
+
+
 ### 제작 배경    
 데이트 '코스'를 짜기 어려워 하고 다른 사람들의 데이트 코스를 보고 참고하고 싶은 사람들을 위한 커뮤니티 플랫폼
 
@@ -35,8 +41,8 @@ Recommend: 신서영
 
 
 ### 프로젝트 아키텍처
-![CSID ER-diagram - Page 11](https://github.com/CSID-DGU/2023-1-SCS4031-Momentree-2/assets/85065626/c81e94ea-7324-4941-ac54-6761ebe02b4b)
+<img src = "https://github.com/CSID-DGU/2023-1-SCS4031-Momentree-2/assets/85065626/c81e94ea-7324-4941-ac54-6761ebe02b4b" width = "500px" />
 
 
 ### DATABASE
-![CSID ER-diagram - Database ER diagram (crow's foot) (1)](https://github.com/CSID-DGU/2023-1-SCS4031-Momentree-2/assets/85065626/060558f9-55fb-4379-a52e-91bbc761fcd2)
+<img src = "https://github.com/CSID-DGU/2023-1-SCS4031-Momentree-2/assets/85065626/060558f9-55fb-4379-a52e-91bbc761fcd2" width = "700px" />
