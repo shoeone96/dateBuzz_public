@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface RecordRepository extends JpaRepository<RecordEntity, Long> {
+public interface RecordRepository extends JpaRepository<RecordEntity, Long>, RecordCustomRepository {
 
     List<RecordEntity> findAllByUser(UserEntity user);
     @Query(value = "select count(*) from RecordEntity record where record.user = :user and record.deletedAt is null")
